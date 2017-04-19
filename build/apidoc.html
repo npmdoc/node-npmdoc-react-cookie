@@ -1,0 +1,659 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/thereactivestack/react-cookie#readme"
+
+    >react-cookie (v1.0.5)</a>
+</h1>
+<h4>Load and save cookies within your React application</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-cookie">module react-cookie</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.load">
+            function <span class="apidocSignatureSpan">react-cookie.</span>load
+            <span class="apidocSignatureSpan">(name, doNotParse, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.plugToRequest">
+            function <span class="apidocSignatureSpan">react-cookie.</span>plugToRequest
+            <span class="apidocSignatureSpan">(req, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.remove">
+            function <span class="apidocSignatureSpan">react-cookie.</span>remove
+            <span class="apidocSignatureSpan">(name, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.save">
+            function <span class="apidocSignatureSpan">react-cookie.</span>save
+            <span class="apidocSignatureSpan">(name, val, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.select">
+            function <span class="apidocSignatureSpan">react-cookie.</span>select
+            <span class="apidocSignatureSpan">(regex)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.setRawCookie">
+            function <span class="apidocSignatureSpan">react-cookie.</span>setRawCookie
+            <span class="apidocSignatureSpan">(rawCookie)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">react-cookie.</span>default</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.react-cookie.default">module react-cookie.default</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.default.load">
+            function <span class="apidocSignatureSpan">react-cookie.default.</span>load
+            <span class="apidocSignatureSpan">(name, doNotParse, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.default.plugToRequest">
+            function <span class="apidocSignatureSpan">react-cookie.default.</span>plugToRequest
+            <span class="apidocSignatureSpan">(req, res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.default.remove">
+            function <span class="apidocSignatureSpan">react-cookie.default.</span>remove
+            <span class="apidocSignatureSpan">(name, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.default.save">
+            function <span class="apidocSignatureSpan">react-cookie.default.</span>save
+            <span class="apidocSignatureSpan">(name, val, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.default.select">
+            function <span class="apidocSignatureSpan">react-cookie.default.</span>select
+            <span class="apidocSignatureSpan">(regex)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.react-cookie.default.setRawCookie">
+            function <span class="apidocSignatureSpan">react-cookie.default.</span>setRawCookie
+            <span class="apidocSignatureSpan">(rawCookie)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-cookie" id="apidoc.module.react-cookie">module react-cookie</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.load" id="apidoc.element.react-cookie.load">
+        function <span class="apidocSignatureSpan">react-cookie.</span>load
+        <span class="apidocSignatureSpan">(name, doNotParse, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function load(name, doNotParse, opt) {
+  var cookies = _isNode2.default ? _rawCookie : _cookie2.default.parse(document.cookie, opt);
+  var cookieVal = cookies &#x26;&#x26; cookies[name];
+
+  if (typeof doNotParse === &#x27;undefined&#x27;) {
+    doNotParse = !cookieVal || cookieVal[0] !== &#x27;{&#x27; &#x26;&#x26; cookieVal[0] !== &#x27;[&#x27;;
+  }
+
+  if (!doNotParse) {
+    try {
+      cookieVal = JSON.parse(cookieVal);
+    } catch (e) {
+      // Not serialized object
+    }
+  }
+
+  return cookieVal;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+import cookie from &#x27;react-cookie&#x27;;
+
+import LoginPanel from &#x27;./LoginPanel&#x27;;
+import Dashboard from &#x27;./Dashboard&#x27;;
+
+export default class MyApp extends Component {
+componentWillMount() {
+  this.state =  { userId: cookie.<span class="apidocCodeKeywordSpan">load</span>(&#x27;userId&#x27;) };
+}
+
+onLogin(userId) {
+  this.setState({ userId });
+  cookie.save(&#x27;userId&#x27;, userId, { path: &#x27;/&#x27; });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.plugToRequest" id="apidoc.element.react-cookie.plugToRequest">
+        function <span class="apidocSignatureSpan">react-cookie.</span>plugToRequest
+        <span class="apidocSignatureSpan">(req, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function plugToRequest(req, res) {
+  if (req.cookie) {
+    _rawCookie = req.cookie;
+  } else if (req.cookies) {
+    _rawCookie = req.cookies;
+  } else if (req.headers &#x26;&#x26; req.headers.cookie) {
+    setRawCookie(req.headers.cookie);
+  } else {
+    _rawCookie = {};
+  }
+
+  _res = res;
+
+  return function unplug() {
+    _res = null;
+    _rawCookie = {};
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.remove" id="apidoc.element.react-cookie.remove">
+        function <span class="apidocSignatureSpan">react-cookie.</span>remove
+        <span class="apidocSignatureSpan">(name, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function remove(name, opt) {
+  delete _rawCookie[name];
+
+  if (typeof opt === &#x27;undefined&#x27;) {
+    opt = {};
+  } else if (typeof opt === &#x27;string&#x27;) {
+    // Will be deprecated in future versions
+    opt = { path: opt };
+  } else {
+    // Prevent mutation of opt below
+    opt = (0, _objectAssign2.default)({}, opt);
+  }
+
+  if (typeof document !== &#x27;undefined&#x27;) {
+    opt.expires = new Date(1970, 1, 1, 0, 0, 1);
+    opt.maxAge = 0;
+    document.cookie = _cookie2.default.serialize(name, &#x27;&#x27;, opt);
+  }
+
+  if (_isResWritable() &#x26;&#x26; _res.clearCookie) {
+    _res.clearCookie(name, opt);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+onLogin(userId) {
+  this.setState({ userId });
+  cookie.save(&#x27;userId&#x27;, userId, { path: &#x27;/&#x27; });
+}
+
+onLogout() {
+  cookie.<span class="apidocCodeKeywordSpan">remove</span>(&#x27;userId&#x27;, { path: &#x27;/&#x27; });
+}
+
+render() {
+  if (!this.state.userId) {
+    return &#x3c;LoginPanel onSuccess={this.onLogin.bind(this)} /&#x3e;;
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.save" id="apidoc.element.react-cookie.save">
+        function <span class="apidocSignatureSpan">react-cookie.</span>save
+        <span class="apidocSignatureSpan">(name, val, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function save(name, val, opt) {
+  _rawCookie[name] = val;
+
+  // allow you to work with cookies as objects.
+  if ((typeof val === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(val)) === &#x27;object&#x27;) {
+    _rawCookie[name] = JSON.stringify(val);
+  }
+
+  // Cookies only work in the browser
+  if (!_isNode2.default) {
+    document.cookie = _cookie2.default.serialize(name, _rawCookie[name], opt);
+  }
+
+  if (_isResWritable() &#x26;&#x26; _res.cookie) {
+    var expressOpt = _extends({}, opt);
+    if (expressOpt.maxAge) {
+      // the standard for maxAge is seconds but express uses milliseconds
+      expressOpt.maxAge = opt.maxAge * 1000;
+    }
+
+    _res.cookie(name, val, opt);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+export default class MyApp extends Component {
+componentWillMount() {
+  this.state =  { userId: cookie.load(&#x27;userId&#x27;) };
+}
+
+onLogin(userId) {
+  this.setState({ userId });
+  cookie.<span class="apidocCodeKeywordSpan">save</span>(&#x27;userId&#x27;, userId, { path: &#x27;/&#x27; });
+}
+
+onLogout() {
+  cookie.remove(&#x27;userId&#x27;, { path: &#x27;/&#x27; });
+}
+
+render() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.select" id="apidoc.element.react-cookie.select">
+        function <span class="apidocSignatureSpan">react-cookie.</span>select
+        <span class="apidocSignatureSpan">(regex)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function select(regex) {
+  var cookies = _isNode2.default ? _rawCookie : _cookie2.default.parse(document.cookie);
+
+  if (!cookies) {
+    return {};
+  }
+
+  if (!regex) {
+    return cookies;
+  }
+
+  return Object.keys(cookies).reduce(function (accumulator, name) {
+    if (!regex.test(name)) {
+      return accumulator;
+    }
+
+    var newCookie = {};
+    newCookie[name] = cookies[name];
+    return (0, _objectAssign2.default)({}, accumulator, newCookie);
+  }, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.setRawCookie" id="apidoc.element.react-cookie.setRawCookie">
+        function <span class="apidocSignatureSpan">react-cookie.</span>setRawCookie
+        <span class="apidocSignatureSpan">(rawCookie)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setRawCookie(rawCookie) {
+  if (rawCookie) {
+    _rawCookie = _cookie2.default.parse(rawCookie);
+  } else {
+    _rawCookie = {};
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.react-cookie.default" id="apidoc.module.react-cookie.default">module react-cookie.default</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.default.load" id="apidoc.element.react-cookie.default.load">
+        function <span class="apidocSignatureSpan">react-cookie.default.</span>load
+        <span class="apidocSignatureSpan">(name, doNotParse, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function load(name, doNotParse, opt) {
+  var cookies = _isNode2.default ? _rawCookie : _cookie2.default.parse(document.cookie, opt);
+  var cookieVal = cookies &#x26;&#x26; cookies[name];
+
+  if (typeof doNotParse === &#x27;undefined&#x27;) {
+    doNotParse = !cookieVal || cookieVal[0] !== &#x27;{&#x27; &#x26;&#x26; cookieVal[0] !== &#x27;[&#x27;;
+  }
+
+  if (!doNotParse) {
+    try {
+      cookieVal = JSON.parse(cookieVal);
+    } catch (e) {
+      // Not serialized object
+    }
+  }
+
+  return cookieVal;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+import cookie from &#x27;react-cookie&#x27;;
+
+import LoginPanel from &#x27;./LoginPanel&#x27;;
+import Dashboard from &#x27;./Dashboard&#x27;;
+
+export default class MyApp extends Component {
+componentWillMount() {
+  this.state =  { userId: cookie.<span class="apidocCodeKeywordSpan">load</span>(&#x27;userId&#x27;) };
+}
+
+onLogin(userId) {
+  this.setState({ userId });
+  cookie.save(&#x27;userId&#x27;, userId, { path: &#x27;/&#x27; });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.default.plugToRequest" id="apidoc.element.react-cookie.default.plugToRequest">
+        function <span class="apidocSignatureSpan">react-cookie.default.</span>plugToRequest
+        <span class="apidocSignatureSpan">(req, res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function plugToRequest(req, res) {
+  if (req.cookie) {
+    _rawCookie = req.cookie;
+  } else if (req.cookies) {
+    _rawCookie = req.cookies;
+  } else if (req.headers &#x26;&#x26; req.headers.cookie) {
+    setRawCookie(req.headers.cookie);
+  } else {
+    _rawCookie = {};
+  }
+
+  _res = res;
+
+  return function unplug() {
+    _res = null;
+    _rawCookie = {};
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.default.remove" id="apidoc.element.react-cookie.default.remove">
+        function <span class="apidocSignatureSpan">react-cookie.default.</span>remove
+        <span class="apidocSignatureSpan">(name, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function remove(name, opt) {
+  delete _rawCookie[name];
+
+  if (typeof opt === &#x27;undefined&#x27;) {
+    opt = {};
+  } else if (typeof opt === &#x27;string&#x27;) {
+    // Will be deprecated in future versions
+    opt = { path: opt };
+  } else {
+    // Prevent mutation of opt below
+    opt = (0, _objectAssign2.default)({}, opt);
+  }
+
+  if (typeof document !== &#x27;undefined&#x27;) {
+    opt.expires = new Date(1970, 1, 1, 0, 0, 1);
+    opt.maxAge = 0;
+    document.cookie = _cookie2.default.serialize(name, &#x27;&#x27;, opt);
+  }
+
+  if (_isResWritable() &#x26;&#x26; _res.clearCookie) {
+    _res.clearCookie(name, opt);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+onLogin(userId) {
+  this.setState({ userId });
+  cookie.save(&#x27;userId&#x27;, userId, { path: &#x27;/&#x27; });
+}
+
+onLogout() {
+  cookie.<span class="apidocCodeKeywordSpan">remove</span>(&#x27;userId&#x27;, { path: &#x27;/&#x27; });
+}
+
+render() {
+  if (!this.state.userId) {
+    return &#x3c;LoginPanel onSuccess={this.onLogin.bind(this)} /&#x3e;;
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.default.save" id="apidoc.element.react-cookie.default.save">
+        function <span class="apidocSignatureSpan">react-cookie.default.</span>save
+        <span class="apidocSignatureSpan">(name, val, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function save(name, val, opt) {
+  _rawCookie[name] = val;
+
+  // allow you to work with cookies as objects.
+  if ((typeof val === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(val)) === &#x27;object&#x27;) {
+    _rawCookie[name] = JSON.stringify(val);
+  }
+
+  // Cookies only work in the browser
+  if (!_isNode2.default) {
+    document.cookie = _cookie2.default.serialize(name, _rawCookie[name], opt);
+  }
+
+  if (_isResWritable() &#x26;&#x26; _res.cookie) {
+    var expressOpt = _extends({}, opt);
+    if (expressOpt.maxAge) {
+      // the standard for maxAge is seconds but express uses milliseconds
+      expressOpt.maxAge = opt.maxAge * 1000;
+    }
+
+    _res.cookie(name, val, opt);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+export default class MyApp extends Component {
+componentWillMount() {
+  this.state =  { userId: cookie.load(&#x27;userId&#x27;) };
+}
+
+onLogin(userId) {
+  this.setState({ userId });
+  cookie.<span class="apidocCodeKeywordSpan">save</span>(&#x27;userId&#x27;, userId, { path: &#x27;/&#x27; });
+}
+
+onLogout() {
+  cookie.remove(&#x27;userId&#x27;, { path: &#x27;/&#x27; });
+}
+
+render() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.default.select" id="apidoc.element.react-cookie.default.select">
+        function <span class="apidocSignatureSpan">react-cookie.default.</span>select
+        <span class="apidocSignatureSpan">(regex)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function select(regex) {
+  var cookies = _isNode2.default ? _rawCookie : _cookie2.default.parse(document.cookie);
+
+  if (!cookies) {
+    return {};
+  }
+
+  if (!regex) {
+    return cookies;
+  }
+
+  return Object.keys(cookies).reduce(function (accumulator, name) {
+    if (!regex.test(name)) {
+      return accumulator;
+    }
+
+    var newCookie = {};
+    newCookie[name] = cookies[name];
+    return (0, _objectAssign2.default)({}, accumulator, newCookie);
+  }, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.react-cookie.default.setRawCookie" id="apidoc.element.react-cookie.default.setRawCookie">
+        function <span class="apidocSignatureSpan">react-cookie.default.</span>setRawCookie
+        <span class="apidocSignatureSpan">(rawCookie)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setRawCookie(rawCookie) {
+  if (rawCookie) {
+    _rawCookie = _cookie2.default.parse(rawCookie);
+  } else {
+    _rawCookie = {};
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
